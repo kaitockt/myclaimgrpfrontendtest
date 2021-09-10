@@ -1,0 +1,24 @@
+Hello and thank you for applying to MyClaimGroup for the Front End Developer role.
+
+In this folder you will find assets including our logo(s) and font.
+
+We need you to take the files in /Plans and create them using your own style/flair 
+whilst maintaining a level of consistency with our current website: https://myclaimgroup.co.uk.
+
+Please use the following technologies (You may use libraries):
+HTML
+CSS
+JavaScript (Vanilla)
+
+
+
+Scenario:
+
+Our designers have said the following:
+
+1. The website should follow mobile first development and be fully responsive to all device types
+2. The logo should NOT be hyperlinked
+3. The page must not take longer than 2 seconds to load
+4. It would be nice to see how users interact with the page, so can you implement https://hotjar.com
+5. The page(s) must conform to WCAG (https://www.w3.org/WAI/standards-guidelines/wcag/) as it will be used by millions of people
+6. SEO is a high priority, can you add the relevant tags

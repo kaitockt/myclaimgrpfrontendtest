@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FrontEndTest</title>
+    <meta name="description" content="My Claim Group is a Trading name of Wisemann Law Limited a Limited Company Registered in England and Wales Company No: 09411174.">
+    <meta name="keywords" content="My Claim Group, Front End, Test, claim, Compensation, Work Place Injury, Dental Negligence, Under Paid, Mortgage, Mis Sold Solar Panel">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!--Alpine.js-->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <!-- Signaturepad -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e54000fd79.js" crossorigin="anonymous"></script>
+
+    <!-- Hotjar Tracking Code for My site -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:2595194,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- My Script -->
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+
+<nav class="text-white fixed w-full shadow-lg" x-data="{mobileMenuOpen: false}">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="p-2.5">
+            <img src="assets/imgs/My-Claim-Group-Logo-White.png" alt="My Claim Group" class="" id="nav-logo">
+        </div>
+        <!-- Menu -->
+        <div class="justify-between nav-fullMenu hidden lg:inline-block">
+            <a href="#" class="mr-12 py-9">Home</a>
+            <a href="#" class="mr-12 py-9">What We Do</a>
+            <a href="#" class="mr-12 py-9">Meet the Team</a>
+            <a href="#" class="mr-12 py-9">Contact Us</a>
+        </div>
+
+        <button class="inline-block w-8 h-8 p-1 lg:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
+            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+        <!-- Contact -->
+        <div class="hidden sm:block">
+            <i class="fas fa-phone-alt"></i>
+            <span class="p-2.5">0800 756 3986</span>
+            <br>
+            <i class="far fa-envelope"></i>
+            <span class="p-2.5">info@myclaimgroup.co.uk</span>
+        </div>
+    </div>
+    <!-- Dropdown Menu -->
+    <nav
+        class="absolute w-full bg-none bg-gray-100 text-gray-600"
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="transform opacity-0 scale-0"
+        x-transition:enter-end="transform opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="transform opacity-100 scale-100"
+        x-transition:leave-end="transform opacity-0 scale-95"
+        @click.away="mobileMenuOpen = false">
+        <ul class="w-full text-center">
+            <li class="hover:text-gray-800 border border-gray-300 p-5">
+                <a href="#" class="">Home</a>
+            </li>
+            <li class="hover:text-gray-800 border border-gray-300 p-5">
+                <a href="#">What We Do</a>
+            </li>
+            <li class="hover:text-gray-800 border border-gray-300 p-5">
+                <a href="#">Meet the Team</a>
+            </li>
+            <li class="hover:text-gray-800 border border-gray-300 p-5">
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+</nav>
+
+
+
+
+<div id="nameForm" class="container min-h-screen flex flex-wrap items-center justify-center">
+    <div class="text-center mx-auto">
+        <strong>We need some more infomation</strong>
+        <div class="rounded-xl p-7 bg-white">
+            <p id="errMsg" class="hidden text-red-500">Please fill in all fields.</p>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" class="p-2 m-2 border w-96" required>
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" class="p-2 m-2 border w-96" required>
+            <br>
+            <button id="submit" class="bg-green-700 hover:bg-green-800 text-white p-3 my-4 mx-auto w-full">Submit</button>
+        </div>
+    </div>
+    
+</div>
+<div id="signatureForm" class="hidden container min-h-screen flex flex-wrap items-center justify-center">
+    <div class="text-center mx-auto">
+        <strong>Please draw your signature</strong>
+        <canvas class="rounded-xl bg-white mx-auto" id="signature">
+
+        </canvas>
+    </div>
+</div>
+
+<footer class="justify-around flex flex-wrap bg-gray-800 text-gray-400 pt-16 pb-6">
+    <p class="w-full md:w-1/4 p-2.5 mr-10">
+        My Claim Group is a Trading name of Wisemann Law Limited a Limited Company Registered in England and Wales Company No: 09411174. Authorised and Regulated by the Solicitors Regulation Authority 622271 Vat Number 212 1624 61. A full list of directors is available from the Companies Registered Office.
+    </p>
+    <address class="w-full md:w-1/6 p-2.5 not-italic">
+        <strong class="text-lg text-white">Address</strong><br>
+        <p class="pt-2.5">
+            Unit 8, Ashbrook Office Park, Longstone Road, Heald Green, M22 5LB
+        </p>
+    </address>
+    <div class="w-full md:w-1/6 p-2.5">
+        <strong class="text-lg text-white">Legal</strong>
+        <ul class="pt-2.5">
+            <li><a href="#" class="text-gray-500 hover:text-gray-400">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-400">Modern UI Kit</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-400">Framer UI Kit</a></li>
+            <li><a href="#" class="text-gray-500 hover:text-gray-400">Gradients UI Kit</a></li>
+        </ul>
+    </div>
+    <div class="w-full md:w-1/6 p-2.5">
+        <div class="rounded-lg bg-white">
+            <img src="assets/imgs/My-Claim-Group-Logo-Black.jpg" alt="My Claim Group" class="p-2.5">
+        </div>
+        <p class="pt-2.5">
+            My claim group © All rights reserved ,2021​
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
